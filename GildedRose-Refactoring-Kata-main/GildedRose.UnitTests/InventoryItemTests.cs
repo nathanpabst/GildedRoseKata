@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using csharp.Models;
-using csharp;
 
 using NUnit.Framework;
 
@@ -178,7 +174,6 @@ namespace csharp.UnitTests
         /// <summary>
         /// Common Item unit tests
         /// </summary>
-
         [Test]
         public void UpdateInventory_CommonItemQualityDropsByOneEachDayUntilItReachesZero_ReturnsTrue()
         {
