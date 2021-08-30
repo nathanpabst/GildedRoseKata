@@ -7,16 +7,16 @@ namespace csharp
     {
         private readonly IList<InventoryItem> _items;
 
-        public GildedRose(IList<InventoryItem> Items)
+        public GildedRose(IList<InventoryItem> items)
         {
-            this._items = Items;
+            this._items = items;
         }
 
-        public void UpdateQuality()
+        public void UpdateItems()
         {
             foreach (var i in _items)
             {
-                i.UpdateQuality();
+                i.UpdateInventory();
             }
         }
     }

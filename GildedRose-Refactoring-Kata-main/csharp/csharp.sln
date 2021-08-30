@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp", "csharp.csproj", "{176C0214-9136-4079-8DAB-11D7420C3881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRose.UnitTests", "..\GildedRose.UnitTests\GildedRose.UnitTests.csproj", "{9D055E37-5B0A-4178-AD66-1D29E561B47F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp.UnitTests", "..\GildedRose.UnitTests\csharp.UnitTests.csproj", "{9D055E37-5B0A-4178-AD66-1D29E561B47F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

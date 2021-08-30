@@ -12,8 +12,8 @@ namespace csharp
         {
             IList<InventoryItem> Items = new List<InventoryItem> { new InventoryItem { InventoryItemCategory = ItemCategory.Common, Name = "foo", SellIn = 0, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
-            Assert.AreEqual("fixme", Items[0].Name);
+            app.UpdateItems();
+            Assert.AreEqual("foo", Items[0].Name);
         }
     }
 }

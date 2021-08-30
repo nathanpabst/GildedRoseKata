@@ -4,7 +4,7 @@
     {
         public ItemCategory InventoryItemCategory { get; set; }
 
-        public void UpdateQuality()
+        public void UpdateInventory()
         {
             switch (this.InventoryItemCategory)
             {
@@ -55,10 +55,6 @@
                         this.Quality = 0;
                     }
 
-                    if (this.SellIn > 0)
-                    {
-                        this.Quality -= 1;
-                    }
                     break;
 
                 case ItemCategory.Legendary:
@@ -67,7 +63,12 @@
                 case ItemCategory.Conjured:
                     if (this.Quality > 0)
                     {
-                        this.Quality -= 1;
+                        this.Quality -= 2;
+                    }
+
+                    if (this.Quality < 0)
+                    {
+                        this.Quality = 0;
                     }
 
                     this.SellIn -= 1;

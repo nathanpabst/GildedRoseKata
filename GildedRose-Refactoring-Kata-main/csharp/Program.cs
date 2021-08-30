@@ -8,9 +8,9 @@ namespace csharp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("OMGHAI!");
+            Console.WriteLine("Gilded Rose Inventory Tracker");
 
-            IList<InventoryItem> InventoryItems = new List<InventoryItem>{
+            IList<InventoryItem> inventoryItems = new List<InventoryItem>{
                 new InventoryItem {InventoryItemCategory = ItemCategory.Common, Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new InventoryItem {InventoryItemCategory = ItemCategory.Cheese, Name = "Aged Brie", SellIn = 2, Quality = 0},
                 new InventoryItem {InventoryItemCategory = ItemCategory.Common, Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
@@ -37,8 +37,7 @@ namespace csharp
                     SellIn = 5,
                     Quality = 49
                 },
-				// this conjured item does not work properly yet
-				new InventoryItem
+                new InventoryItem
                 {
                     InventoryItemCategory = ItemCategory.Conjured,
                     Name = "Conjured Mana Cake",
@@ -47,20 +46,21 @@ namespace csharp
                 }
             };
 
-            var app = new GildedRose(InventoryItems);
+            var app = new GildedRose(inventoryItems);
 
             for (var i = 0; i < 31; i++)
             {
                 Console.WriteLine("-------- day " + i + " --------");
                 Console.WriteLine("name, sellIn, quality");
-                for (var j = 0; j < InventoryItems.Count; j++)
+                foreach (var j in inventoryItems)
                 {
-                    System.Console.WriteLine(InventoryItems[j]);
+                    System.Console.WriteLine(j);
                 }
                 Console.WriteLine("");
-                app.UpdateQuality();
+                app.UpdateItems();
             }
 
+            Console.WriteLine("Press the Enter key to exit");
             Console.ReadLine();
         }
     }
